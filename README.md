@@ -2,10 +2,13 @@
 code to make SPIN file using CHG file
 
 Reads CHG file for structure information, grid dimensions, and extracts the second set of spin density data. 
+
 Outputs this information into new file SPIN.vasp with the same format as CHG file.
+
 The default input file is the CHG file but user can choose a different file. 
 
 Vesta example using SiH3
+
 CHGCAR:
 
 
