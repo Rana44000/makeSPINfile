@@ -5,11 +5,11 @@ Reads CHG file for structure information, grid dimensions, and extracts the seco
 
 Outputs this information into new file SPIN.vasp with the same format as CHG file.
 
-The default input file is the CHG file but user can choose a different file. 
+The default input file is the CHG file but user can choose a different file using -chg
 
 Vesta example using SiH3
 
-CHGCAR:
+CHG:
 
 
 <img width="459" height="413" alt="image" src="https://github.com/user-attachments/assets/8735db82-358c-4ac0-989e-4e9113c79258" />
