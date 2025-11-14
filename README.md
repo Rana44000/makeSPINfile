@@ -1,6 +1,12 @@
 # makeSPINfile
 code to make SPIN file using CHG file
 
+The CHG file is created from the program VASP. 
+
+For more information on CHG, see: https://www.vasp.at/wiki/CHG
+
+For more information on VASP, see: https://www.vasp.at/wiki/index.php/The_VASP_Manual
+
 Reads CHG file for structure information, grid dimensions, and extracts the second set of spin density data. 
 
 Outputs this information into new file SPIN.vasp with the same format as CHG file.
