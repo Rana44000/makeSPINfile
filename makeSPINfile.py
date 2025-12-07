@@ -8,6 +8,8 @@ parser = argparse.ArgumentParser(description="Arguments for CHG file ",
 parser.add_argument("-chg", nargs='?', default = "./CHG", help="chg file location")
 args = parser.parse_args()
 config = vars(args)
+DLineNum=0
+lineCount=0
 count=0
 count2=0
 num2=0
@@ -17,12 +19,16 @@ dNums = ""
 #reads chg and finds dimension integers
 with open(config['chg'], 'r') as f:
     for line in f:
-        parts = line.strip().split()
-        if len(parts) == 3:
-           if all('.' not in part and 'e' not in part.lower() for part in parts):
-              nums = list(map(int, parts))
-              dNums = line
-              break
+        lineCount=lineCount+1
+        if 'Direct' in line:
+            DLineNum=lineCount
+        if DLineNum<=lineCount and DLineNum!=0:
+            parts = line.strip().split()
+            if len(parts) == 3:
+                if all('.' not in part and 'e' not in part.lower() and part.isdigit() for part in parts):
+                    nums = list(map(int, parts))
+                    dNums = line
+                    break
 print("Running code to create SPIN.vasp file")
 #Reads CHG file and outputs lines after second iteration of the three integers into new file; SPIN.txt
 always_print = False
