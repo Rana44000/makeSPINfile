@@ -18,7 +18,7 @@ For more information on VASP, see: https://www.vasp.at/wiki/index.php/The_VASP_M
 
 
 
-##Vesta examples
+## Vesta examples
 SiH3
 
 CHG:
